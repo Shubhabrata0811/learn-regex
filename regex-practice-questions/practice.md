@@ -258,93 +258,85 @@ null
 ```
 
 31. What does `"abc123".match(/(\d+)(\w+)/)` return? 
-
 ```javascript
-
+"abc123".match(/(\d+)(\w+)/);
 ```
 ```
-[""]
+["123", "12", "3"] //greedy
 ```
 
 32. What does `"hello123".match(/\D+/)` return? 
-
 ```javascript
-
+"hello123".match(/\D+/);
 ```
 ```
-[""]
+["hello"]
 ```
 
 33. What will `"yes no maybe".match(/(\w+)\s(\w+)\s(\w+)/)` return? 
-
 ```javascript
-
+"yes no maybe".match(/(\w+)\s(\w+)\s(\w+)/);
 ```
 ```
-[""]
+["yes no maybe", "yes", "no", "maybe"]
 ```
 
 34. What does `"color: #123456".match(/#[0-9a-fA-F]{6}/)` return? 
 
 ```javascript
-
+"color: #123456".match(/#[0-9a-fA-F]{6}/)
 ```
 ```
-[""]
+["#123456"]
 ```
 
 35. What does `"aaa111bbb222".match(/([a-z]+)(\d+)/)` return? 
-
 ```javascript
-
+"aaa111bbb222".match(/([a-z]+)(\d+)/);
 ```
 ```
-[""]
+["aaa111", "aaa", "111"]
 ```
 
 36. What will `"1,234.56".match(/\d{1,3}(,\d{3})*\.\d{2}/)` return? 
-
 ```javascript
-
+"1,234.56".match(/\d{1,3}(,\d{3})*\.\d{2}/);
 ```
 ```
-[""]
+["1,234.56", ",234"]
 ```
 
 37. What does `"aabbcc".match(/a(b{2})c/)` return? 
-
 ```javascript
-
+"aabbcc".match(/a(b{2})c/);
 ```
 ```
-[""]
+["abbc", bb]
 ```
 
 38. What does `"xyzz".match(/x(y(z))/)` return? 
 
 ```javascript
-
+"xyzz".match(/x(y(z))/);
 ```
 ```
-[""]
+["xyz", "yz", "z"]
 ```
 
 39. What does `"abab".match(/(ab)\1/)` return? 
-
 ```javascript
-
+"abab".match(/(ab)\1/);
 ```
 ```
-[""]
+["abab", "ab"]
 ```
 
 40. What will `"abc123abc".match(/(abc)\d+\1/)` return? 
-
 ```javascript
-
+"abc123abc".match(/(abc)\d+\1/);
 ```
 ```
-[""]
+["abc123abc", "abc"]
 ```
 
 
