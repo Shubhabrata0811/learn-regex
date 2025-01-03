@@ -1,246 +1,366 @@
 
 ### **Type 1: Explanation**  
 1. What does the expression `"cat, bat, rat".match(/b\w+/)` do?  
+
 ```javascript
 "cat, bat, rat".match(/b\w+/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["bat"]</span> 
+```
+["bat"]
+```
+
 
 2. What will `"123-456-7890".match(/\d{3}/)` return?  
+
 ```javascript
 "123-456-7890".match(/\d{3}/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["123"]</span> 
+```
+["123"]
+```
 
 3. What does `"hello\nworld".match(/.\n./)` return?  
+
 ```javascript
 "hello\nworld".match(/.\n./);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["o\nw"]</span> 
+```
+["o\nw"]
+```
 
 4. What will `"name@example.com".match(/\w+@\w+\.\w+/)` return? 
-<span style="color:red">#regex for standard valid email</span> 
+**#regex for standard valid email**
 
 ```javascript
 "name@example.com".match(/\w+@\w+\.\w+/) // Returns ["name@example.com"]
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["name@example.com"]</span> 
+```
+["name@example.com"]
+```
 
 5. What does `"file.txt".match(/\.txt/)` do?  
+
 ```javascript
 "file.txt".match(/\.txt/); // Returns [".txt"]
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[".txt"]</span> 
+```
+[".txt"]
+```
 
 6. What does `"red green blue".match(/green/)` do?  
+
 ```javascript
 "red green blue".match(/green/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["green"]</span> 
+```
+["green"]
+```
 
 7. What will `"abcdef".match(/[a-c]/)` return?  
+
 ```javascript
 "abcdef".match(/[a-c]/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["a"]</span> 
+```
+["a"]
+```
 
-8. What does `"The quick brown fox".match(/q.+?k/)` return?  
+8. What does `"The quick brown fox".match(/q.+?k/) return?  
+
 ```javascript
 "The quick brown fox".match(/q.+?k/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["quick"]</span> 
+```
+["quick"]
+```
 
-9.  What does `"apple".match(/a[a-z]+/)` return?  
+9.  What does `"apple".match(/a[a-z]+/) return?  
+
 ```javascript
 "apple".match(/a[a-z]+/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["apple"]</span> 
+```
+["apple"]
+```
 
 10. What will `"a1b2c3".match(/\d+/)` return?  
+
 ```javascript
 "a1b2c3".match(/\d+/)
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;["1"]</span> 
+```
+["1"]
+```
 
-11. What does `"good food mood".match(/o+o/)` do?  
+11. What does `"good food mood".match(/o+o/)` do? 
+
 ```javascript
 "good food mood".match(/o+o/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 12. What does `"@username".match(/@\w+/)` return?  
+
 ```javascript
 "@username".match(/@\w+/);
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
-1.  What does `"path/to/file".match(/\/to\//)` do?  
+13.  What does `"path/to/file".match(/\/to\//)` do?  
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+
+```
+[""]
+```
 
 14. What does `"1.23".match(/\d\.\d+/)` return?  
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+
+```
+[""]
+```
 
 15. What will `"AB123CD".match(/[A-Z]+\d+/)` return?  
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+
+```
+[""]
+```
 
 16. What does `"hello_world".match(/\w+_\w+/)` return? 
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+
+```
+[""]
+```
 
 17. What does `"123abc456".match(/\d{3}/)` return?  
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+
+```
+[""]
+```
 
 18. What does `"My name is John".match(/name\s\w+/)` return? 
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+
+```
+[""]
+```
 
 19. What will `"https://example.com".match(/https?:\/\/\w+\.\w+/)` return? 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 20. What does `"abcdEFGH".match(/[A-Z]+/)` return?  
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 21. What does `"abc123".match(/(\w)(\d)/)` return?  
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 22. What will `"hello world".match(/(\w+)\s(\w+)/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 23. What does `"1234".match(/\d{2,3}/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 24. What will `"aaaabbb".match(/a{2,}/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 25. What does `"hello".match(/[aeiou]{2}/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 26. What does `"ABCD1234".match(/[A-Z]+\d+/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 27. What does `"file_name.ext".match(/(\w+)\.(\w+)/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 28. What does `"Mississippi".match(/s{2,}/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 29. What will `"hello world".match(/(\w)(?=\s\w)/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 30. What does `"2025-01-01".match(/\d{4}-(\d{2})-(\d{2})/)[2]` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 31. What does `"abc123".match(/(\d+)(\w+)/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 32. What does `"hello123".match(/\D+/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 33. What will `"yes no maybe".match(/(\w+)\s(\w+)\s(\w+)/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 34. What does `"color: #123456".match(/#[0-9a-fA-F]{6}/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 35. What does `"aaa111bbb222".match(/([a-z]+)(\d+)/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 36. What will `"1,234.56".match(/\d{1,3}(,\d{3})*\.\d{2}/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 37. What does `"aabbcc".match(/a(b{2})c/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 38. What does `"xyzz".match(/x(y(z))/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 39. What does `"abab".match(/(ab)\1/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 40. What will `"abc123abc".match(/(abc)\d+\1/)` 
+
 ```javascript
 
 ```
-<span style="color:green">&nbsp;&nbsp;&nbsp;&nbsp;[""]</span> 
+```
+[""]
+```
 
 
 ---
