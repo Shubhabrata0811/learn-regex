@@ -98,7 +98,7 @@
 "good food mood".match(/o+o/);
 ```
 ```
-[""]
+["oo"]
 ```
 
 12. What does `"@username".match(/@\w+/)` return?  
@@ -107,82 +107,157 @@
 "@username".match(/@\w+/);
 ```
 ```
-[""]
+["@username"]
 ```
 
 13.  What does `"path/to/file".match(/\/to\//)` do?  
 ```javascript
-
+"path/to/file".match(/\/to\//);
 ```
-
 ```
-[""]
+["/to/"]
 ```
 
 14. What does `"1.23".match(/\d\.\d+/)` return?  
 ```javascript
-
+"1.23".match(/\d\.\d+/);
 ```
-
 ```
-[""]
+["1.23"]
 ```
 
 15. What will `"AB123CD".match(/[A-Z]+\d+/)` return?  
 ```javascript
-
+"AB123CD".match(/[A-Z]+\d+/);
 ```
-
 ```
-[""]
+["AB123"]
 ```
 
 16. What does `"hello_world".match(/\w+_\w+/)` return? 
 ```javascript
-
+"hello_world".match(/\w+_\w+/);
 ```
-
 ```
-[""]
+["hello_world"]
 ```
 
 17. What does `"123abc456".match(/\d{3}/)` return?  
 ```javascript
-
+"123abc456".match(/\d{3}/);
 ```
-
 ```
-[""]
+["123"]
 ```
 
 18. What does `"My name is John".match(/name\s\w+/)` return? 
 ```javascript
-
+"My name is John".match(/name\s\w+/);
 ```
-
 ```
-[""]
+["name is"]
 ```
 
 19. What will `"https://example.com".match(/https?:\/\/\w+\.\w+/)` return? 
-
+**Standard http or https url**
 ```javascript
-
+"https://example.com".match(/https?:\/\/\w+\.\w+/);
 ```
 ```
-[""]
+["https://example.com"]
 ```
 
 20. What does `"abcdEFGH".match(/[A-Z]+/)` return?  
-
 ```javascript
-
+"abcdEFGH".match(/[A-Z]+/);
 ```
 ```
-[""]
+["EFGH"]
 ```
 
 21. What does `"abc123".match(/(\w)(\d)/)` return?  
+```javascript
+"abc123".match(/(\w)(\d)/);
+```
+```
+["c1", "c", "1"]
+```
+
+22. What will `"hello world".match(/(\w+)\s(\w+)/)`  return? 
+```javascript
+"hello world".match(/(\w+)\s(\w+)/)
+```
+```
+["hello world", "hello", "world"]
+```
+
+23. What does `"1234".match(/\d{2,3}/)` do?
+```javascript
+"1234".match(/\d{2,3}/);
+```
+```
+["123"]
+```
+
+24. What will `"aaaabbb".match(/a{2,}/)` return? 
+```javascript
+"aaaabbb".match(/a{2,}/);
+```
+```
+["aaaa"]
+```
+
+25. What does `"hello".match(/[aeiou]{2}/)` return? 
+```javascript
+"hello".match(/[aeiou]{2}/);
+```
+```
+null
+```
+
+26. What does `"ABCD1234".match(/[A-Z]+\d+/)` return? 
+```javascript
+"ABCD1234".match(/[A-Z]+\d+/);
+```
+```
+["ABCD1234"]
+```
+
+27. What does `"file_name.txt".match(/(\w+)\.(\w+)/)` return? 
+```javascript
+"file_name.txt".match(/(\w+)\.(\w+)/)
+```
+```
+["file_name.txt", "file_name", "txt"]
+```
+
+28. What does `"Mississippi".match(/s{2,}/)` return? 
+```javascript
+"Mississippi".match(/s{2,}/);
+```
+```
+["ss"]
+```
+
+29. What will `"hello world".match(/(\w)(?=\s\w)/)` return? 
+**lookaround question (+ve lookahead)**
+```javascript
+"hello world".match(/(\w)(?=\s\w)/)
+```
+```
+["o", "o"]
+```
+
+30. What does `"2025-01-01".match(/\d{4}-(\d{2})-(\d{2})/)[2]` return? 
+
+```javascript
+"2025-01-01".match(/\d{4}-(\d{2})-(\d{2})/)[2];
+```
+```
+"01"
+```
+
+31. What does `"abc123".match(/(\d+)(\w+)/)` return? 
 
 ```javascript
 
@@ -191,7 +266,7 @@
 [""]
 ```
 
-22. What will `"hello world".match(/(\w+)\s(\w+)/)` 
+32. What does `"hello123".match(/\D+/)` return? 
 
 ```javascript
 
@@ -200,7 +275,7 @@
 [""]
 ```
 
-23. What does `"1234".match(/\d{2,3}/)` 
+33. What will `"yes no maybe".match(/(\w+)\s(\w+)\s(\w+)/)` return? 
 
 ```javascript
 
@@ -209,7 +284,7 @@
 [""]
 ```
 
-24. What will `"aaaabbb".match(/a{2,}/)` 
+34. What does `"color: #123456".match(/#[0-9a-fA-F]{6}/)` return? 
 
 ```javascript
 
@@ -218,7 +293,7 @@
 [""]
 ```
 
-25. What does `"hello".match(/[aeiou]{2}/)` 
+35. What does `"aaa111bbb222".match(/([a-z]+)(\d+)/)` return? 
 
 ```javascript
 
@@ -227,7 +302,7 @@
 [""]
 ```
 
-26. What does `"ABCD1234".match(/[A-Z]+\d+/)` 
+36. What will `"1,234.56".match(/\d{1,3}(,\d{3})*\.\d{2}/)` return? 
 
 ```javascript
 
@@ -236,7 +311,7 @@
 [""]
 ```
 
-27. What does `"file_name.ext".match(/(\w+)\.(\w+)/)` 
+37. What does `"aabbcc".match(/a(b{2})c/)` return? 
 
 ```javascript
 
@@ -245,7 +320,7 @@
 [""]
 ```
 
-28. What does `"Mississippi".match(/s{2,}/)` 
+38. What does `"xyzz".match(/x(y(z))/)` return? 
 
 ```javascript
 
@@ -254,7 +329,7 @@
 [""]
 ```
 
-29. What will `"hello world".match(/(\w)(?=\s\w)/)` 
+39. What does `"abab".match(/(ab)\1/)` return? 
 
 ```javascript
 
@@ -263,97 +338,7 @@
 [""]
 ```
 
-30. What does `"2025-01-01".match(/\d{4}-(\d{2})-(\d{2})/)[2]` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-31. What does `"abc123".match(/(\d+)(\w+)/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-32. What does `"hello123".match(/\D+/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-33. What will `"yes no maybe".match(/(\w+)\s(\w+)\s(\w+)/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-34. What does `"color: #123456".match(/#[0-9a-fA-F]{6}/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-35. What does `"aaa111bbb222".match(/([a-z]+)(\d+)/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-36. What will `"1,234.56".match(/\d{1,3}(,\d{3})*\.\d{2}/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-37. What does `"aabbcc".match(/a(b{2})c/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-38. What does `"xyzz".match(/x(y(z))/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-39. What does `"abab".match(/(ab)\1/)` 
-
-```javascript
-
-```
-```
-[""]
-```
-
-40. What will `"abc123abc".match(/(abc)\d+\1/)` 
+40. What will `"abc123abc".match(/(abc)\d+\1/)` return? 
 
 ```javascript
 
